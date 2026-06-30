@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/60/",
+  base: "/60m/",
   resolve: {
     alias: {
       "lottie-web": "lottie-web/build/player/lottie_light",
