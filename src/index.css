@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'SF Pro Rounded';
+    src: url('/src/assets/font/SF-Pro-Rounded-Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    font-optical-sizing: auto;
+}
+
+@font-face {
+    font-family: 'SF Pro Rounded';
+    src: url('/src/assets/font/SF-Pro-Rounded-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    font-optical-sizing: auto;
+}
+
+@font-face {
+    font-family: 'SF Pro Rounded';
+    src: url('/src/assets/font/SF-Pro-Rounded-Heavy.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+    font-optical-sizing: auto;
+}
+
+:root {
+    --neutral-50: #fafafa;
+    --neutral-100: #f5f5f5;
+    --neutral-200: #e5e5e5;
+    --neutral-300: #d4d4d4;
+    --neutral-400: #a3a3a3;
+    --neutral-500: #737373;
+    --neutral-600: #525252;
+    --neutral-700: #404040;
+    --neutral-800: #262626;
+    --neutral-900: #171717;
+    --neutral-950: #0a0a0a;
+
+    --fuchsia-50: #fdf4ff;
+    --fuchsia-100: #fae8ff;
+    --fuchsia-200: #f5d0fe;
+    --fuchsia-300: #f0abfc;
+    --fuchsia-400: #e879f9;
+    --fuchsia-500: #d946ef;
+    --fuchsia-600: #c026d3;
+    --fuchsia-700: #a21caf;
+    --fuchsia-800: #86198f;
+    --fuchsia-900: #701a75;
+    --fuchsia-950: #4a044e;
+
+    --accent: var(--fuchsia-400);
+    --accent-strong: var(--fuchsia-500);
+    --accent-soft: var(--fuchsia-100);
+    --accent-border: var(--fuchsia-200);
+
+    --break-strong: #0d9488;
+    --break-soft: #e6fbf4;
+    --break-border: #bdf4df;
+
+    --warn-strong: #a16207;
+    --warn-soft: #fef9c3;
+    --warn-border: #fde047;
+
+    --danger-strong: #dc2626;
+    --danger-soft: #fee2e2;
+    --danger-border: #fecaca;
+
+    --surface: #ffffff;
+    --bg: var(--neutral-50);
+
+    --font-sans:
+        "SF Pro Rounded",
+        "Inter",
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+
+    --weight-semibold: 600;
+    --weight-bold: 700;
+    --weight-heavy: 800;
+
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+    --radius-full: 999px;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .04);
+
+    --ease: cubic-bezier(.16, 1, .3, 1);
+    --transition-fast: 150ms;
+    --transition-normal: 250ms;
+}
+
+:root[data-theme="dark"] {
+    --neutral-50: #15110f;
+    --neutral-100: #1c1714;
+    --neutral-200: #2a2320;
+    --neutral-300: #3a312c;
+    --neutral-400: #8d8076;
+    --neutral-500: #a89c91;
+    --neutral-600: #c2b7ac;
+    --neutral-700: #d6cdc3;
+    --neutral-800: #e8e2da;
+    --neutral-900: #f2ede6;
+    --neutral-950: #f7f3ee;
+
+    --accent: #c98bc4;
+    --accent-strong: #e3a6da;
+    --accent-soft: #2c2129;
+    --accent-border: #3c2c37;
+
+    --break-strong: #5fc9b6;
+    --break-soft: #152924;
+    --break-border: #1f3a33;
+
+    --warn-strong: #e3b95f;
+    --warn-soft: #2b2210;
+    --warn-border: #4a3a16;
+
+    --danger-strong: #e88a7d;
+    --danger-soft: #36201d;
+    --danger-border: #4a2c27;
+
+    --surface: #1e1815;
+    --bg: var(--neutral-50);
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .5);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overscroll-behavior: none;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: var(--font-sans);
+    background: var(--surface);
+    color: var(--neutral-950);
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color var(--transition-normal) var(--ease), color var(--transition-normal) var(--ease);
+}
+
+#root {
+    height: 100%;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+figure,
+time {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    appearance: none;
+    border: none;
+    background: none;
+    font-family: inherit;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
