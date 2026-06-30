@@ -1,9 +1,10 @@
+// Vite Config
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/60m/",
+  base: "/60/",
   resolve: {
     alias: {
       "lottie-web": "lottie-web/build/player/lottie_light",
